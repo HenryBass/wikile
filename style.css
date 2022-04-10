@@ -1,0 +1,15 @@
+body {
+  background: black;
+  color: white;
+  font-family: monospace;
+  text-align: center;
+}
+
+.summary {
+  border: 2px #7AA665 solid;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 14px;
+}
