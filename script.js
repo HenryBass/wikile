@@ -1,7 +1,9 @@
 pages = ["Among Us", "Frog", "Stack Overflow", "Feynman Diagram", "Reddit", "Taiwan"]
 
+attempts = 5;
+
 var r = Math.floor(Math.random() * pages.length);
-console.log(r)
+
 page = pages[r]
 
 const request = new Request(`https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${page.replace(" ", "%20")}&origin=*&indexpageids`);
@@ -30,7 +32,11 @@ function updatetext() {
 }
 
 document.getElementById("input").addEventListener("keypress", function (event) {
+  if (attempts >= 0) {
   if (event.key === "Enter") {
-    document.getElementById("")
+    document.getElementById("out").innerHTML += "<br>" + document.getElementById("input").value;
+    document.getElementById("input").value = "";
+  }
+    attempts -= 1;
   }
 })

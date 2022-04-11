@@ -9,32 +9,46 @@ body {
   border: 2px #7AA665 solid;
   border-radius: 5px;
   padding: 20px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: auto;
   font-size: 13px;
+  width: 40%;
+  margin-bottom: 20px;
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+
+#box {
+
+  font-size: 36px;
+
+  padding: 10px;
+  text-align: center;
+  font-family: monospace;
+  background: black;
+  border: 2px #7AA665 solid;
+  border-radius: 5px;
+  color: white;
+  width: 50%;
+    margin: auto;
+
+
 }
 
 #input {
   font-size: 36px;
-  margin: 24px;
-  text-align: center;
-  font-family: monospace;
-  background: black;
-  border: 2px #7AA665 solid;
-  border-radius: 5px;
-  color: white;
-}
+  width: 60%;
 
-#out {
-    margin-left: 20%;
-  margin-right: 20%;
-  font-size: 36px;
-  margin: 24px;
-  padding: 23px;
   text-align: center;
   font-family: monospace;
   background: black;
   border: 2px #7AA665 solid;
   border-radius: 5px;
   color: white;
+    margin: auto;
+
 }
