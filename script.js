@@ -1,4 +1,4 @@
-pages = ["Among Us", "Frog", "Stack Overflow", "Feynman Diagram", "Reddit", "Taiwan", "Hack Club", "Apollo 5"]
+pages = ["Among Us", "Stack Overflow", "Feynman Diagram", "Reddit", "Taiwan", "Apollo 5", "Manhattan Project"]
 
 attempts = 0;
 
@@ -36,7 +36,7 @@ function updatetext() {
   casetitle = new RegExp(title, 'gi');
   redacted = summary.replaceAll(casetitle, word.join(""))
 
-  document.getElementById("summary").innerHTML = redacted.slice(0, 200 * (attempts + 1)) + "...";
+  document.getElementById("summary").innerHTML = "\"" + redacted.slice(0, 200 * (attempts + 1)) + "..." + "\"";
 }
 
 document.getElementById("input").addEventListener("keypress", function (event) {
