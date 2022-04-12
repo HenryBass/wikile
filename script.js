@@ -1,4 +1,4 @@
-pages = ["Hack Club", "Feynman Diagram", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Soyuz", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography", "Boson"]
+pages = ["Sputnik", "Feynman Diagram", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Turbine", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography", "Boson", "Wolfenstein 3D"]
 
 attempts = 0;
 
@@ -31,6 +31,8 @@ fetch(request).then(response => {
     for(var i=0;i<title.length;i++) {
       word[i] = "&#129001"
     }
+    summary = summary.replace(/ *\([^)]*\) */g, " ");
+
   updatetext()
 });
 })
