@@ -111,7 +111,7 @@ function copy() {
   c = document.getElementById("title").innerText;
     var elem = document.createElement("textarea");
     document.body.appendChild(elem);
-    elem.value = c;
+    elem.value = c + "https://henrybass.github.io/wikile/index.html";
     elem.select();
     document.execCommand("copy");
     document.body.removeChild(elem);
