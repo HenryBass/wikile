@@ -1,6 +1,6 @@
 //import Cookies from 'js.cookie.mjs'
 
-pages = ["Hack Club", "Feynman Diagram", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Soyuz", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography"]
+pages = ["Hack Club", "Feynman Diagram", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Soyuz", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography", "Boson"]
 
 attempts = 0;
 
@@ -20,7 +20,6 @@ var id
 var casetitle
 var redacted
 var len
-var lastword
 var word = []
 var letters = 0
 var done = false;
@@ -34,7 +33,6 @@ fetch(request).then(response => {
     for(var i=0;i<title.length;i++) {
       word[i] = "&#129001"
     }
-  lastword = title
   updatetext()
 });
 })
@@ -87,7 +85,7 @@ document.getElementById("input").addEventListener("keypress", function (event) {
     }
     
     
-    document.getElementById("out").innerHTML += "<br>" +     document.getElementById("input").value.toUpperCase() + message;
+    document.getElementById("out").innerHTML += "<br class=smolbr>" +     document.getElementById("input").value.toUpperCase() + message;
     document.getElementById("input").value = "";
     attempts += 1;
     document.getElementById("remaining").innerHTML = "Remaining Attempts: " + (3 - attempts);

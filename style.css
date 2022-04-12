@@ -35,7 +35,7 @@ user-select: none;
   color: white;
   width: 40%;
     margin: auto;
-
+line-height: 15px;
 
 }
 
@@ -59,4 +59,8 @@ a{
 
 a:visited {
   color: #BFA65A;
+}
+
+.smolbr {
+  
 }
