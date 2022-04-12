@@ -1,5 +1,3 @@
-//import Cookies from 'js.cookie.mjs'
-
 pages = ["Hack Club", "Feynman Diagram", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Soyuz", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography", "Boson"]
 
 attempts = 0;
@@ -60,9 +58,10 @@ document.getElementById("input").addEventListener("keypress", function (event) {
         word[i] = title[i];
         letters += 1
         results += "&#129001";
-      } else if (prediction.includes(title[i])){
+      } else if (prediction.includes(title[i].toLowerCase())){
         word[i] = "🟨";
         results += "🟨";
+        
       }
         else {
         results += "&#11035";
@@ -89,7 +88,7 @@ document.getElementById("input").addEventListener("keypress", function (event) {
     document.getElementById("input").value = "";
     attempts += 1;
     document.getElementById("remaining").innerHTML = "Remaining Attempts: " + (3 - attempts);
-    
+
     updatetext()
     letters = 0;
   }
