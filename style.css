@@ -8,7 +8,7 @@ body {
 .summary {
   border: 2px #7AA665 solid;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   margin: auto;
   font-size: 13px;
   width: 40%;
@@ -24,7 +24,7 @@ user-select: none;
 
 #box {
 
-  font-size: 36px;
+  font-size: 32px;
 
   padding: 10px;
   text-align: center;
@@ -46,7 +46,7 @@ text-transform: uppercase;
   text-align: center;
   font-family: monospace;
   background: black;
-  border: 2px #7AA665 solid;
+  border: 2px solid #6E7173;
   border-radius: 5px;
   color: white;
     margin: auto;
