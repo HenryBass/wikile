@@ -52,3 +52,11 @@ text-transform: uppercase;
     margin: auto;
 
 }
+
+a{
+  color: #7AA665;
+}
+
+a:visited {
+  color: #BFA65A;
+}

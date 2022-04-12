@@ -17,6 +17,7 @@ var len
 var lastword
 var word = []
 var letters = 0
+var done = false;
 
 fetch(request).then(response => {
   response.json().then(data => {
@@ -42,7 +43,7 @@ document.getElementById("input").addEventListener("keypress", function (event) {
   
   if (attempts < 3) {
   
-  if (event.key === "Enter" && document.getElementById("input").value != "") {
+  if (event.key === "Enter" && document.getElementById("input").value != "" && done == false) {
     var prediction = document.getElementById("input").value.toLowerCase();
     for (var i = 0; i < title.length; i++) {
       if (prediction[i] === title[i].toLowerCase()) {
@@ -53,8 +54,10 @@ document.getElementById("input").addEventListener("keypress", function (event) {
 
     if (letters < title.length && attempts == 2) {
       message = "<br> <p style=\"font-size: 16px\">You lose! The title was: " + title + "</p>"
+      done = true;
     } else if (letters == title.length) {
       message = "<br> <p style=\"font-size: 16px\">You win! The title was: " + title + "</p>"
+      done = true;
     }
     else {
       message = "<br> <p style=\"font-size: 10px\">Correct Letters: " + letters + "</p>"
@@ -64,6 +67,7 @@ document.getElementById("input").addEventListener("keypress", function (event) {
     document.getElementById("out").innerHTML += "<br>" + document.getElementById("input").value.toUpperCase() + message;
     document.getElementById("input").value = "";
     attempts += 1;
+    document.getElementById("remaining").innerHTML = "Remaining Attempts: " + (3 - attempts);
     updatetext()
     letters = 0;
   }
