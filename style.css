@@ -61,6 +61,19 @@ a:visited {
   color: #BFA65A;
 }
 
-.smolbr {
-  
+button {
+  margin-bottom: 10px;
+  border: 2px #7AA665 solid;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+
+}
+
+button:hover {
+  background-color: #BFA65A;
+  color: black;
+    border: 2px #BFA65A solid;
+
 }

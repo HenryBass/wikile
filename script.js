@@ -1,6 +1,7 @@
 pages = ["Sputnik", "Feynman Diagram", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Turbine", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography", "Boson", "Wolfenstein 3D"]
 
 attempts = 0;
+document.getElementById("copy").style.display = "none";
 
 var timestamp = Math.floor((Date.now() / 8.64e7));
 
@@ -21,7 +22,8 @@ var len
 var word = []
 var letters = 0
 var done = false;
-var results = "Wikile #" + day + "<br>";
+var info = "Wikile #" + day + " - ";
+var results = "";
 
 fetch(request).then(response => {
   response.json().then(data => {
@@ -75,11 +77,17 @@ document.getElementById("input").addEventListener("keypress", function (event) {
     if (letters < title.length && attempts == 2) {
       message = "<br> <p style=\"font-size: 16px\">You lose! The title was: " + title + "</p>"
       done = true;
-      document.getElementById("title").innerHTML = results;
+      info += (attempts + 1)  + "/3<br>"
+      document.getElementById("title").innerHTML = info + results;
+      document.getElementById("copy").style.display = "inline";
+
     } else if (letters == title.length) {
       message = "<br> <p style=\"font-size: 16px\">You win! The title was: " + title + "</p>"
       done = true;
-      document.getElementById("title").innerHTML = results;
+      info += (attempts + 1)  + "/3<br>"
+      document.getElementById("title").innerHTML = info + results;
+      document.getElementById("copy").style.display = "inline";
+
     }
     else {
       message = "<br> <p style=\"font-size: 10px\">Correct Letters: " + letters + "/" + title.length + "</p>"
@@ -98,3 +106,13 @@ document.getElementById("input").addEventListener("keypress", function (event) {
   }
 
 });
+
+function copy() {
+  c = document.getElementById("title").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = c;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+}
