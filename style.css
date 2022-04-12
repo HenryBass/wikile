@@ -33,7 +33,7 @@ user-select: none;
   border: 2px #7AA665 solid;
   border-radius: 5px;
   color: white;
-  width: 50%;
+  width: 40%;
     margin: auto;
 
 
@@ -41,8 +41,8 @@ user-select: none;
 
 #input {
   font-size: 36px;
-  width: 60%;
-
+  width: 90%;
+text-transform: uppercase;
   text-align: center;
   font-family: monospace;
   background: black;
