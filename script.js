@@ -31,7 +31,11 @@ fetch(request).then(response => {
   summary = (data.query.pages[id].extract)
   title = (data.query.pages[id].title)
     for(var i=0;i<title.length;i++) {
-      word[i] = "&#129001"
+      if(title[i] == " ") {
+        word[i] = " "
+      } else {
+        word[i] = "&#129001"
+      }
     }
     summary = summary.replace(/ *\([^)]*\) */g, " ");
 
@@ -63,8 +67,8 @@ document.getElementById("input").addEventListener("keypress", function (event) {
         letters += 1
         results += "&#129001";
       } else if (prediction.includes(title[i].toLowerCase())){
-        word[i] = "🟨";
-        results += "🟨";
+        word[i] = "&#129000;";
+        results += "&#129000;";
         
       }
         else {
