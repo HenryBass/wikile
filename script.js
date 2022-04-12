@@ -1,4 +1,4 @@
-pages = ["Among Us", "Stack Overflow", "Feynman Diagram", "Reddit", "Taiwan", "Apollo 5", "Manhattan Project"]
+pages = ["Stack Overflow", "Feynman Diagram", "Taiwan", "Apollo 5", "Manhattan Project"]
 
 attempts = 0;
 
