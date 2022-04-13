@@ -34,7 +34,7 @@ fetch(request).then(response => {
       if(title[i] == " ") {
         word[i] = " "
       } else {
-        word[i] = "🟩"
+        word[i] = "⬛"
       }
     }
     summary = summary.replace(/ *\([^)]*\) */g, " ");
