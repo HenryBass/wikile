@@ -34,7 +34,7 @@ fetch(request).then(response => {
       if(title[i] == " ") {
         word[i] = " "
       } else {
-        word[i] = "&#129001"
+        word[i] = "🟩"
       }
     }
     summary = summary.replace(/ *\([^)]*\) */g, " ");
@@ -65,14 +65,14 @@ document.getElementById("input").addEventListener("keypress", function (event) {
       if (prediction[i] === title[i].toLowerCase()) {
         word[i] = title[i];
         letters += 1
-        results += "&#129001";
+        results += "🟩";
       } else if (prediction.includes(title[i].toLowerCase())){
-        word[i] = "&#129000;";
-        results += "&#129000;";
+        word[i] = "🟨";
+        results += "🟨";
         
       }
         else {
-        results += "&#11035";
+        results += "⬛";
       }
     }
     
