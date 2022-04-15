@@ -1,4 +1,4 @@
-pages = ["Sputnik", "Turbine", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Turbine", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography", "Boson", "Wolfenstein 3D", "Boolean algebra", "Poison ivy", "Gulf of Mexico", "Electromagnetic field", "Feynman Diagram"]
+pages = ["Sputnik", "Turbine", "Unicode", "Taiwan", "Malbolge", "Manhattan Project", "Brainfuck", "Apollo 5", "Axiom", "Cosmological constant", "Radon", "Stack Overflow", "Watt", "The Great Dictator", "Congo River", "Falcon Heavy", "Lexicon", "League of Nations", "Processor register", "Cryptography", "Boson", "Wolfenstein 3D", "Boolean algebra", "Poison ivy", "Gulf of Mexico", "Electromagnetic field", "Feynman Diagram"]
 
 attempts = 0;
 document.getElementById("copy").style.display = "none";
